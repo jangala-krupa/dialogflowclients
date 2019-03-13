@@ -54,8 +54,9 @@ def create_intent(project_id, display_name, training_phrases_parts,
         messages=[message])
 
       response = intents_client.create_intent(parent, intent)
-      intent.parent_followup_intent_name = "testing intent1"
+      parent_followup_intent_name = "testing intent1"
       print('Intent created: {}'.format(response))
+      #print ("follow up intent is{}".format(parent_followup_intent_name))
    # print training_phrases
     except Exception as e:
        print ("Intent already exists!")
